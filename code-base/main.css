@@ -16,6 +16,13 @@ main {
     text-align: center;
     height: 100%;
 }
+a {
+    color: #fff;
+    text-decoration: none;
+}
+h1 {
+    letter-spacing: 2.4px;
+}
 .page-header {
     font-family: 'Barlow Condensed', sans-serif;
     display: flex;
@@ -29,11 +36,7 @@ main {
     position: absolute;
     top: 5px;
     right: 0;
-    
-}
-a {
-    text-decoration: none;
-    color: white;
+    z-index: 999;
 }
 .line {
     position: absolute;
@@ -44,7 +47,7 @@ a {
     background-color: white;
     border: none;
     opacity: 0.23;
-    z-index: 9;
+    z-index: 9999;
 }
 .nav-button {
     display: none;
@@ -67,31 +70,14 @@ a {
     top: 20px;
     left: 20px;
 }
-.main-info {
-    display: flex;
-    flex-direction: column;
+.nav-word {
+    font-family: Barlow Condensed;
+    border: none;
+    background: transparent;
+    color: #D0D6F9;
 }
-.article-header {
-    font-family: 'Barlow Condensed', sans-serif;
-    letter-spacing: 2.7px;
-    line-height: 19.2px;
-}
-h1 {
-    font-family: 'Bellefair', serif;
-    font-size: 80px;
-    color: white;
-    font-weight: 400;
-}
-.description {
-    margin-top: 20px;
-    line-height: 25px;
-}
-
-
 @media (max-width: 500px) {
-    body {
-        background-image: url(assets/home/background-home-mobile.jpg);
-    }
+
     .page-header {
         position: absolute;
         flex-direction: column;
@@ -113,23 +99,9 @@ h1 {
     .explore-button {
         display: none;
     }
-    .main-info {
-        position: relative;
-        top: 17%;
-        margin: 0 25px;
-    }
-    .article-header {
-        margin-bottom: 22px;
-    }
-    
-    
 }
 @media (max-width: 860px) and (min-width: 500px) {
-    body {
-        background-image: url(assets/home/background-home-tablet.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    
     .page-header {
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(15px);
@@ -150,31 +122,8 @@ h1 {
     .line {
         display: none;
     }
-    .main-info {
-        position: relative;
-        top: 17%;
-        margin: 0 21%;
-    }
-    .article-header {
-        margin-bottom: 22px;
-        font-size: 20px;
-    }
-    h1 {
-        font-size: 150px;
-    }
-    .description {
-        font-size: 16px;
-        margin: 20px 0;
-        word-wrap: break-word;
-    }
-    
 }
 @media (min-width: 860px) {
-    body {
-        background-image: url(assets/home/background-home-desktop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     .page-header {
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(15px);
@@ -182,7 +131,7 @@ h1 {
         line-height: 17px;
         color: #fff;
         position: absolute;
-        top: 38px;
+        top: 37px;
         right: 0;
         letter-spacing: 2.7px;
     }
@@ -194,31 +143,4 @@ h1 {
         top: 62px;
         left: 50px;
     }
-    .main-info {
-        position: absolute;
-        max-width: 444px;
-        bottom: 12.5%;
-        left: 11.5%;
-        text-align: left;
-        
-    }
-    .explore-button {
-        display: none;
-    }
-    .article-header {
-        margin-bottom: 30px;
-        font-size: 28px;
-        letter-spacing: 4.7px;
-    }
-
-    h1 {
-        font-size: 150px;
-    }
-    .description {
-        line-height: 32px;
-        font-size: 18px;
-        margin: 20px 0;
-        word-wrap: break-word;
-    }
-
 }

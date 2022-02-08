@@ -1,0 +1,102 @@
+.main-info {
+    display: flex;
+    flex-direction: column;
+}
+.article-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+    line-height: 19.2px;
+}
+h1 {
+    font-family: 'Bellefair', serif;
+    font-size: 80px;
+    color: white;
+    font-weight: 400;
+}
+.description {
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+
+@media (max-width: 500px) {
+    body {
+        background-image: url(assets/home/background-home-mobile.jpg);
+    }
+    .nav-button {
+        display: initial;
+        transform: scale(0.85);
+    }
+    .explore-button {
+        display: none;
+    }
+    .main-info {
+        position: relative;
+        top: 17%;
+        margin: 0 25px;
+    }
+    .article-header {
+        margin-bottom: 22px;
+    }
+    
+    
+}
+@media (max-width: 860px) and (min-width: 500px) {
+    body {
+        background-image: url(assets/home/background-home-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main-info {
+        position: relative;
+        top: 17%;
+        margin: 0 21%;
+    }
+    .article-header {
+        margin-bottom: 22px;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 150px;
+    }
+    .description {
+        font-size: 16px;
+        margin: 20px 0;
+        word-wrap: break-word;
+    }
+    
+}
+@media (min-width: 860px) {
+    body {
+        background-image: url(assets/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main-info {
+        position: absolute;
+        max-width: 444px;
+        bottom: 12.5%;
+        left: 11.5%;
+        text-align: left;
+        
+    }
+    .explore-button {
+        display: none;
+    }
+    .article-header {
+        margin-bottom: 30px;
+        font-size: 28px;
+        letter-spacing: 4.7px;
+    }
+
+    h1 {
+        font-size: 150px;
+    }
+    .description {
+        line-height: 32px;
+        font-size: 18px;
+        margin: 20px 0;
+        word-wrap: break-word;
+    }
+
+}

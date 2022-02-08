@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');</style>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="destination.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <script defer type="module" src="./load-destination.js"></script>
   <script defer src="script.js"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -21,24 +23,23 @@
       <a href="crew-commander.html"><span class="pre-numbers">02</span> CREW</a>
       <a href="technology-vehicle.html"><span class="pre-numbers">03</span> TECNOLOGY</a>
     </header>
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Moon
-
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
-
-  Avg. distance
-  384,400 km
-
-  Est. travel time
-  3 days
+    <section class="set">
+      <div class="top-text"><span class="number">01</span> PICK YOUR DESTINATION</div>
+      <img id="image" src="assets/destination/image-moon.webp" alt="">
+      <nav class="nav-bar" id="nav-bar"></nav>
+    
+      <article class="main-info">
+        <h1 class="name" id="name">MOON</h1>
+        <p class="desc" id="desc">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you’re there, take in some history 
+          by visiting the Luna 2 and Apollo 11 landing sites.</p>
+        <hr class="sep-line">
+        <section class="numbers">
+          <p class="distance">Avg. distance <br> <span id="km">384,400 km</span></p>
+          <p class="travel-time">Est. travel time <br> <span id="time">3 days</span></p>
+        </section>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
