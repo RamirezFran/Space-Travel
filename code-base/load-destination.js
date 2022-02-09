@@ -34,4 +34,5 @@ function setUp(x) {
     time.textContent = info.destinations[x].travel;
 
 }
+setUp(0)
 create()

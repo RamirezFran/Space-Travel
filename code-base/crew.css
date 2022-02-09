@@ -1,15 +1,222 @@
+.top-text {
+    font-family: Barlow Condensed;
+    letter-spacing: 2.7px;
+}
+
+.number {
+    opacity: 0.25;
+    font-weight: bold;
+    position: relative;
+    left: -18px;
+}
+.set {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desc {
+    line-height: 25px;
+}
+.nav-bar {
+    font-family: Barlow Condensed;
+    letter-spacing: 2.4px;
+    word-spacing: 20px;
+}
+.numbers {
+    font-family: Barlow Condensed;
+    line-height: 2rem;
+}
+.name {
+    font-family: Bellefair;
+    font-weight: 400;
+}
+.nav-word:hover {
+    cursor: pointer;
+}
+.charge {
+    font-family: Bellefair;
+    opacity: .5;
+    Line-height: 18.34px;
+}
+.sel-button {
+    opacity: .25;
+    color: white;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.sel-button:last-child {
+    margin-right: 0;
+}
+.sel-button.active {
+    opacity: 1;
+}
+.sel-button:hover {
+    cursor: pointer;
+}
 @media (max-width: 500px) {
     body {
         background-image: url(./assets/crew/background-crew-mobile.jpg);
+    }
+    .top-text {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+    }
+    #parent {
+        display: inline-block;
+        line-height: 0;
+        margin-left: 0;
+        margin-left: calc((0.35 - 1) * 514px);
+    }
+    #image {
+        width: 514px;
+        height: 700px;
+        z-index: -99;
+        transform: scale(0.35);
+        transform-origin: top center;
+        margin-bottom: calc((0.35 - 1) * 700px);
+        position: relative;
+        left: 35%;
+    }
+    .nav-bar {
+        margin: 2rem 0 .8rem 0;
+    }
+    .sep-line {
+        width: 90%;
+        height: .5px;
+        border: none;
+        background-color: #fff;
+        opacity: .1;
+    }
+    .charge {
+        margin-bottom: 8px;
+    }
+    .name {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+    }
+    .desc {
+        margin: 0 8%;
+    }
+    .sel-button {
+        width: 15px;
+        height: 15px;
+        margin-right: 1rem;
     }
 }
 @media (max-width: 860px) and (min-width: 500px) {
     body {
         background-image: url(./assets/crew/background-crew-tablet.jpg);
     }
+    .top-text {
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+        position: relative;
+        left: -15rem;
+    }
+    #parent {
+        display: inline-block;
+        line-height: 0;
+        margin-left: calc((0.7 - 1) * 514px);
+        position: relative;
+        
+    }
+    #image {
+        width: 514px;
+        height: 700px;
+        z-index: -99;
+        transform: scale(0.7);
+        transform-origin: top center;
+        margin-bottom: calc((0.7 - 1) * 700px);
+        position: fixed;
+        bottom: 0;
+        left: 9rem;
+        
+    }
+    .nav-bar {
+        position: absolute;
+        top: 110%;
+    }
+    .sep-line {
+        display: none;
+    }
+    .charge {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+    .name {
+        font-size: 40px;
+        margin-bottom: 1.5rem;
+    }
+    .main-info {
+        margin: 0 20%;
+    }
+    .sel-button {
+        width: 20px;
+        height: 20px;
+        margin-right: 2rem;
+    }
 }
 @media (min-width: 860px) {
     body {
         background-image: url(./assets/crew/background-crew-desktop.jpg);
+        background-repeat: repeat-y;
+    }
+    .top-text {
+        text-align: left;
+        position: relative;
+        top: 5rem;
+        left: 1rem;
+        margin: 0 20%;
+        font-size: 28px;
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    #parent {
+        display: block;
+        line-height: 0;
+        position: absolute;
+        right: 5rem;
+        bottom: 0;
+    }
+    #image {
+        line-height: 0;
+        z-index: -99;
+        transform: scale(.87);
+        transform-origin: bottom;
+    }
+    .nav-bar {
+        position: relative;
+        top: -3rem;
+        grid-area: 3 / 1 / span  1 / span 1;
+    }
+    .sep-line {
+        display: none;
+    }
+    .charge {
+        font-size: 24px;
+        margin-bottom: 1rem;
+        
+    }
+    .name {
+        font-size: 40px;
+        margin-bottom: 1.5rem;
+    }
+    .main-info {
+        margin: 0 20%;
+        grid-area: 2 / 1 / span  1 / span 1;
+        text-align: left;
+    }
+    .set {
+        display: grid;
+        grid-template-rows: 1fr 1.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+    }
+    .sel-button {
+        width: 20px;
+        height: 20px;
+        margin-right: 2rem;
     }
 }
