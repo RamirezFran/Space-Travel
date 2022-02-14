@@ -37,6 +37,6 @@ function setUp(x) {
     img.src = info.crew[x].images.webp;
     desc.textContent = info.crew[x].bio;
     charge.textContent = info.crew[x].role.toUpperCase();
-    
 }
 create()
+setUp(0)

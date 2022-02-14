@@ -21,19 +21,10 @@
 }
 .nav-bar {
     font-family: Barlow Condensed;
-    letter-spacing: 2.4px;
-    word-spacing: 20px;
-}
-.numbers {
-    font-family: Barlow Condensed;
-    line-height: 2rem;
 }
 .name {
     font-family: Bellefair;
     font-weight: 400;
-}
-.nav-word:hover {
-    cursor: pointer;
 }
 .charge {
     font-family: Bellefair;

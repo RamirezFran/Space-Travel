@@ -1,44 +1,46 @@
 import data from './data.json' assert {type: "json"};
 const info = JSON.parse(JSON.stringify(data));
-console.log(info.destinations);
+console.log(info.crew);
 const nav = document.getElementById("nav-bar");
 const name = document.getElementById("name");
 const img = document.getElementById("image");
 const desc = document.getElementById("desc");
-const km = document.getElementById("km");
-const time = document.getElementById("time");
+
 
 function create() {
-    for (let i = 0; i < info.destinations.length; i++) {
+    for (let i = 0; i < info.technology.length; i++) {
         let node = document.createElement("button");
-        node.innerText = info.destinations[i].name.toUpperCase();
+        node.innerText = i + 1;
         node.id = "b" + i;
-        node.className = "nav-word";
+        node.className = "sel-button";
         nav.appendChild(node);
     };
     const b0 = document.getElementById("b0");
     const b1 = document.getElementById("b1");
     const b2 = document.getElementById("b2");
-    const b3 = document.getElementById("b3");
-    b0.className = "nav-word active"
+    b0.className = "sel-button active"
     b0.addEventListener("click", () => {setUp(0)});
     b1.addEventListener("click", () => {setUp(1)});
     b2.addEventListener("click", () => {setUp(2)});
-    b3.addEventListener("click", () => {setUp(3)});
+    
 }
 function setUp(x) {
-    const arr = [b0, b1, b2, b3];
+    const arr = [b0, b1, b2];
     for (let i of arr) {
-        if (i.className === "nav-word active") {
-            i.className = "nav-word";
+        if (i.className === "sel-button active") {
+            i.className = "sel-button";
         }
     }
     arr[x].className += " active";
-    name.textContent = info.destinations[x].name.toUpperCase();
-    img.src = info.destinations[x].images.webp;
-    desc.textContent = info.destinations[x].description;
-    km.textContent = info.destinations[x].distance;
-    time.textContent = info.destinations[x].travel;
+    name.textContent = info.technology[x].name.toUpperCase();
+    if (screen.width < 860) {
+        img.src = info.technology[x].images.landscape;
+    }else {
+        img.src = info.technology[x].images.portrait;
+    }
+    
+    desc.textContent = info.technology[x].description;
+    
 }
 create()
 setUp(0)

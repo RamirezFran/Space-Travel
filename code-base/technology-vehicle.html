@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');</style>
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="tecnology.css">
+  <link rel="stylesheet" href="technology.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <script defer src="script.js"></script>
+  <script defer type="module" src="load-technology.js"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
@@ -20,21 +21,23 @@
       <a href="index.html"><span class="pre-numbers">00</span> HOME</a>
       <a href="destination-moon.html"><span class="pre-numbers">01</span> DESTINATION</a>
       <a href="crew-commander.html"><span class="pre-numbers">02</span> CREW</a>
-      <a href="technology-vehicle.html"><span class="pre-numbers">03</span> TECNOLOGY</a>
+      <a href="technology-vehicle.html"><span class="pre-numbers ">03</span><span class="header-active">TECNOLOGY</span></a>
     </header>
 
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Launch vehicle
-
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+    <article class="set">
+      <div class="top-text"><span class="number">03</span> SPACE LAUNCH 101</div> 
+      <figure id="parent">
+        <img id="image" src="" alt="" >
+      </figure>
+      <nav class="nav-bar" id="nav-bar">
+      </nav>
+    
+      <section class="main-info">
+        <p class="tec-header">THE TERMINOLOGY...</p>
+        <h1 class="name" id="name"></h1>
+        <p class="desc" id="desc"></p>
+      </section>
+    </article>
+  </main>
 </body>
 </html>

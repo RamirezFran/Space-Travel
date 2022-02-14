@@ -2,7 +2,6 @@ const navButton = document.getElementById("open-nav");
 const navBar = document.getElementById("page-header");
 const closeButton = document.getElementById("close-nav");
 
-
 navButton.addEventListener("click", () => {
     if (navBar.style.display !== "none") {
         navBar.style.display = "none";
